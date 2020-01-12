@@ -1,3 +1,11 @@
+:root {
+  --main-color: #367FA9;
+  --second-color: #cce2ef;
+  --button-color: #970000;
+  --link-color: #009bff;
+  --link-hover-color: #367FA9;
+  --link-broken-color: #970000;
+}
 body {
 	line-height: 1.6em;
 }
@@ -134,7 +142,7 @@ alert.label a {
 }
 code {
 	font-weight: normal;
-	color: #222222;
+	color: var(--main-color);
 }
 small {
 	font-size: 80%;
@@ -661,23 +669,93 @@ h1#firstHeading {
 }
 }
 
-/* Don't like the black top bar? Copy this into your Foreground.css and change the colors 
+/* Don't like the black top bar? Copy this into your Foreground.css and change the colors */
 
 .top-bar, 
 .top-bar-section ul, 
 .top-bar-section ul li.active > a, 
 .top-bar-section li a:not(.button), 
 .top-bar-section .has-form {
-    background: #333333;
+    background: var(--main-color);
 }
 
+nav.top-bar,
+.top-bar.expanded .title-area {
+    background: var(--main-color);
+}
+
+#navwrapper {
+    background: var(--main-color);
+}
+
+ul#top-bar-left li,
+ul#top-bar-left li a
+ {
+    background: var(--main-color);
+}
+
+ul#top-bar-right li,
+ul#top-bar-right li a {
+    background: var(--main-color);
+}
+
+ul#top-bar-left li:hover,
+ul#top-bar-left li a:hover,
+ul#top-bar-right li:hover:not(.has-form),
+ul#top-bar-right li a:hover {
+    background: var(--second-color);
+    color: #fff;
+}
+
+.top-bar-section .has-dropdown > a:hover:after {
+    border-color: #fff transparent transparent transparent;
+}
+
+.top-bar-section .has-dropdown > a:hover:after {
+    border-color: #333 transparent transparent transparent;
+}
+/* Search button */
+button,
+.button,
+.multipleTemplateAdder {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    background-color: var(--button-color);
+}
+input#wpPreview {
+    background-color: var(--button-color);
+    border-color: var(--second-color);
+    color: #000000;
+}
+input[type="submit"] {
+    background-color: var(--button-color);
+    border-color: var(--second-color);
+}
+.label {
+    background-color: var(--button-color);
+} 
+a {
+    color: var(--link-color);
+}
+a:hover, a:focus {
+    color: var(--link-hover-color);
+}
+a.new {
+    color: var(--link-broken-color);
+}
+
+/* end custom nav bar */
 
 .top-bar-section > ul > .divider,
 .top-bar-section > ul > [role="separator"] {
   border-color: black;
 }
 
-*/
 
 .vertical-divider {
 	width: 100%;
@@ -768,7 +846,7 @@ a.label.new {
 }
 a#actions-button {
 	float: right;
-	z-index: 499;
+	z-index: 1;
 }
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
@@ -823,7 +901,7 @@ alert.label a {
 }
 code {
 	font-weight: normal;
-	color: #222222;
+	color: var(--main-color);
 }
 small {
 	font-size: 80%;
@@ -1158,29 +1236,8 @@ input[type="file"], select {
 button.ui-button-icon-only {
 	height: 2.24em !important;
 }
-input[type="search"] {
-    margin: 0;
-}
-input[type="date"] {
-    margin: .5rem 0;
-}
-input[type="date"] {
-    width: auto;
-}
-input[type="file"] {
-    margin: .5rem 0;
-}
-input:not([type]), textarea, p.meta {
-    margin: .5rem 0;
-}
-input[type="text"] {
-    padding: 5px 20px 5px 5px;
-    margin: .5rem 0;
-}
 select {
-    padding: 5px 20px 5px 5px;
-    margin: .5rem 0;
-    width: auto;
+	width: auto;
 }
 input[type="checkbox"].createboxInput {
 	width: auto;
@@ -1194,6 +1251,12 @@ label.checkboxLabel {
 }
 input[type="radio"], input[type="checkbox"] {
 	display: inline;
+}
+input[type='file'] {
+	margin-top: 0.4em;
+}
+input:not([type]), textarea, p.meta {
+	margin-bottom: 4px;
 }
 label {
 	display: inline;
@@ -1564,75 +1627,5 @@ td.htmlform-tip {
 	margin-top: 1em;
 }
 
-/* Images the MediaWiki way */
 
-/* Images, Thumbs and Captions */
-.thumbinner {
-    border: 1px solid #c8ccd1;
-    padding: 3px;
-    background-color: #f8f9fa;
-    font-size: 94%;
-    text-align: center;
-    overflow: hidden;
-    margin: auto;
-    max-width: 100%;
-}
-.thumb.tright, .thumb.left {
-    max-width: 100%;
-}
-.thumbcaption {
-    border: 0;
-    line-height: 1.4em;
-    padding: 3px;
-    font-size: 94%;
-    text-align: left;
-}
-.magnify a {
-    display: block;
-    text-indent: 15px;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 15px;
-    height: 11px;
-}
-.mw-content-ltr .magnify a {
-    background-image: url(/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.png);
-}
 
-/* Float right and left styles - Make all MW images responsive for mobile when floated  */
- 
-.floatright, .tright,
-table.floatright {
-    margin: 0 0 .5em .5em;
-    border: 0;
-}
- 
-.floatleft,.tleft
-table.floatleft {
-    margin: 0 .5em .5em 0;
-    border: 0;
-}
-
-.tnone {
-    margin: .5rem 0;
-    border: 0;
-}
-
-.floatnone img {
-    margin: .5rem 0;
-}
-
-/* Kill the float for smaller screens and make them align center. */
-
-@media only screen and (max-width: 640px) { 
-    .floatright,
-    table.floatright,
-    .floatleft,
-    table.floatleft,
-    .thumb.tleft,
-    .thumb.tright {
-        text-align: center;
-        float: none !important;
-        margin: .5em auto;
-    }
-}
