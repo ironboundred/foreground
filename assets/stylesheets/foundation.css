@@ -55,7 +55,7 @@ body {
   font-size: 100%; }
 
 body {
-  background: #fff;
+  background: #fffff0;
   color: #222;
   cursor: auto;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -1170,11 +1170,11 @@ button, .button {
   button:hover, button:focus, .button:hover, .button:focus {
     color: #FFFFFF; }
   button.secondary, .button.secondary {
-    background-color: #e7e7e7;
+    background-color: #970000/* #e7e7e7 */;
     border-color: #b9b9b9;
-    color: #333333; }
+    color: #fff/*#333333*/; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-      background-color: #b9b9b9; }
+      background-color: #cce2ef/*#b9b9b9*/; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       color: #333333; }
   button.success, .button.success {
@@ -1817,9 +1817,9 @@ meta.foundation-mq-topbar {
     .top-bar.expanded .title-area {
       background: #333333; }
     .top-bar.expanded .toggle-topbar a {
-      color: #888888; }
+      color: #fff /*#888888*/; }
       .top-bar.expanded .toggle-topbar a span::after {
-        box-shadow: 0 0 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888; }
+        box-shadow: 0 0 0 1px #fff /*#888888*/, 0 7px 0 1px #fff /*#888888*/, 0 14px 0 1px #fff /*#888888*/; }
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
       .top-bar.expanded .top-bar-section .has-dropdown.moved > .dropdown,
       .top-bar.expanded .top-bar-section .dropdown {
@@ -3719,7 +3719,7 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #008CBA;
+  color: #970000; /* 008CBA; */
   line-height: inherit;
   text-decoration: none; }
   a:hover, a:focus {

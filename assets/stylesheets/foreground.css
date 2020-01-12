@@ -1,3 +1,11 @@
+:root {
+  --main-color: #367FA9;
+  --second-color: #cce2ef;
+  --button-color: #970000;
+  --link-color: #009bff;
+  --link-hover-color: #367FA9;
+  --link-broken-color: #970000;
+}
 body {
 	line-height: 1.6em;
 }
@@ -134,7 +142,7 @@ alert.label a {
 }
 code {
 	font-weight: normal;
-	color: #222222;
+	color: var(--main-color);
 }
 small {
 	font-size: 80%;
@@ -661,23 +669,93 @@ h1#firstHeading {
 }
 }
 
-/* Don't like the black top bar? Copy this into your Foreground.css and change the colors 
+/* Don't like the black top bar? Copy this into your Foreground.css and change the colors */
 
 .top-bar, 
 .top-bar-section ul, 
 .top-bar-section ul li.active > a, 
 .top-bar-section li a:not(.button), 
 .top-bar-section .has-form {
-    background: #333333;
+    background: var(--main-color);
 }
 
+nav.top-bar,
+.top-bar.expanded .title-area {
+    background: var(--main-color);
+}
+
+#navwrapper {
+    background: var(--main-color);
+}
+
+ul#top-bar-left li,
+ul#top-bar-left li a
+ {
+    background: var(--main-color);
+}
+
+ul#top-bar-right li,
+ul#top-bar-right li a {
+    background: var(--main-color);
+}
+
+ul#top-bar-left li:hover,
+ul#top-bar-left li a:hover,
+ul#top-bar-right li:hover:not(.has-form),
+ul#top-bar-right li a:hover {
+    background: var(--second-color);
+    color: #fff;
+}
+
+.top-bar-section .has-dropdown > a:hover:after {
+    border-color: #fff transparent transparent transparent;
+}
+
+.top-bar-section .has-dropdown > a:hover:after {
+    border-color: #333 transparent transparent transparent;
+}
+/* Search button */
+button,
+.button,
+.multipleTemplateAdder {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+    background-color: var(--button-color);
+}
+input#wpPreview {
+    background-color: var(--button-color);
+    border-color: var(--second-color);
+    color: #000000;
+}
+input[type="submit"] {
+    background-color: var(--button-color);
+    border-color: var(--second-color);
+}
+.label {
+    background-color: var(--button-color);
+} 
+a {
+    color: var(--link-color);
+}
+a:hover, a:focus {
+    color: var(--link-hover-color);
+}
+a.new {
+    color: var(--link-broken-color);
+}
+
+/* end custom nav bar */
 
 .top-bar-section > ul > .divider,
 .top-bar-section > ul > [role="separator"] {
   border-color: black;
 }
 
-*/
 
 .vertical-divider {
 	width: 100%;
@@ -768,7 +846,7 @@ a.label.new {
 }
 a#actions-button {
 	float: right;
-	z-index: 499;
+	z-index: 1;
 }
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
@@ -823,7 +901,7 @@ alert.label a {
 }
 code {
 	font-weight: normal;
-	color: #222222;
+	color: var(--main-color);
 }
 small {
 	font-size: 80%;
@@ -1548,3 +1626,6 @@ td.htmlform-tip {
 	font-size: 90%;
 	margin-top: 1em;
 }
+
+
+
