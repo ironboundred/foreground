@@ -1,13 +1,15 @@
 :root {
-  --main-color: #367FA9;
-  --second-color: #cce2ef;
-  --button-color: #970000;
+  --main-color: #8b0024;
+  --second-color: #e05176;
+  --button-color: #367fa9;
   --link-color: #009bff;
   --link-hover-color: #367FA9;
   --link-broken-color: #970000;
 }
 body {
 	line-height: 1.6em;
+	font-family: "Nunito", Helvetica, Roboto, Arial, sans-serif;
+	background: #ffffff;
 }
 p {
 	margin-bottom: 0.25em;
@@ -27,6 +29,7 @@ a.label.new {
 a#actions-button {
 	float: right;
 	z-index: 499;
+	background-color: var(--button-color, #367fa9);
 }
 
 /* rtl an ltr */
@@ -154,6 +157,7 @@ h4.namespace.label {
 }
 .label {
 	padding-bottom: 0.39em;
+	font-family: inherit;
 }
 h2 span {
 	display: inline-block;
@@ -409,6 +413,7 @@ ul.vcard {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 0em;
 	line-height: 1em;
+	font-family: inherit;
 }
 .page-Special_SpecialPages h2 {
 	margin-bottom: 0.5em;
@@ -569,6 +574,8 @@ li label.inline {
 button, .button {
 	margin: 0.5em 0;
 	padding: 0.3em 0.75em 0.4em 0.75em;
+	background-color: var(--button-color, #367fa9);
+	font-family: inherit;
 }
 .top-bar-logo {
 	max-width: 100%;
@@ -659,8 +666,9 @@ div.mw-htmlform-field-HTMLCheckField div.mw-label {
 /* firstHeading Fix */
 
 h1#firstHeading {
-    font-size: 2.125rem;
+	font-size: 2.125rem;
 	margin: 0;
+	padding-top: 10px;
 }
 
 @media only screen and (min-width: 40.0625em) {
@@ -847,6 +855,7 @@ a.label.new {
 a#actions-button {
 	float: right;
 	z-index: 1;
+	background-color: var(--button-color, #367fa9);
 }
 
 /* Hide the page actions button for special pages (cuz there's nothing in it) */
@@ -1123,6 +1132,7 @@ ul.vcard {
 h1, h2, h3, h4, h5, h6 {
 	margin-top: .75em;
 	line-height: 1em;
+	font-family: inherit;
 }
 .page-Special_SpecialPages h2 {
 	margin-bottom: 0.5em;
@@ -1283,6 +1293,8 @@ li label.inline {
 button, .button {
 	margin: 0.5em 0;
 	padding: 0.3em 0.75em 0.4em 0.75em;
+	background-color: var(--button-color, #367fa9);
+	font-family: inherit;
 }
 .top-bar-logo {
 	max-width: 100%;
@@ -1319,6 +1331,11 @@ button, .button {
 .top-bar-section .dropdown {
 	z-index: 600;
 }
+
+.top-bar-section ul li > a {
+	font-family: inherit;
+}
+
 input[type="submit"] {
 	background-color: #5da423;
 	border-color: #457a1a;
@@ -1626,6 +1643,3 @@ td.htmlform-tip {
 	font-size: 90%;
 	margin-top: 1em;
 }
-
-
-
