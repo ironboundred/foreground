@@ -694,6 +694,7 @@ nav.top-bar,
 
 #navwrapper {
     background: var(--main-color);
+	z-index: 600;
 }
 
 ul#top-bar-left li,
