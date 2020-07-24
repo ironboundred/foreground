@@ -697,6 +697,10 @@ nav.top-bar,
 	z-index: 600;
 }
 
+.f-topbar-fixed {
+ 	padding-top:0 !important;
+}
+
 ul#top-bar-left li,
 ul#top-bar-left li a
  {
